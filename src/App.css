@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.shapeImage {
+  height: 6em;
+}
+
+.shapeImageDeleting {
+  height: 6em;
+  background-color: red;
+  animation-name: imageToDelete;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.shapeWin {
+  height: 6em;
+  animation-name: winAnim;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes winAnim {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.3);}
+  100% {transform: scale(1);}
+}
+
+@keyframes imageToDelete {
+  0%   {filter: brightness(100%);}
+  50%  {filter: brightness(75%);}
+  100%  {filter: brightness(100%);}
+}
+
+#Title{
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+}
+
+#playerUI{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+  padding-bottom: 6px;
+}
+
+#myTurn{
+  color: yellow;
+}
+
+#stopTurn{
+  color: #888;
+}
+
+#winner{
+  font-size: 2em;
+  color: rgb(0, 255, 0);
+}
+
+#loser{
+  color: red;
+}
+
+#resetButton{
+  background-color: orangered;
+  margin-top: 5px;
+  font-size: 1em;
+}
